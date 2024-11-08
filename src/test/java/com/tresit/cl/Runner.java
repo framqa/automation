@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         glue = "com.tresit.cl.definitions",
         tags = "@Chatbox"
 )
-public class RunnerChatbox {
+public class Runner {
 
 
 }
