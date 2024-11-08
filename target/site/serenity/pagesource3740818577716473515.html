@@ -1,0 +1,78 @@
+<html lang='en'><head><link href='prism/prism.css' rel='stylesheet' /></head><body><script src='prism/prism.js'></script><body><div><pre><code class='language-html'>&lt;html data-l10n-sync="true" lang="en-US" dir="ltr"&gt;<br/>
+ &lt;head&gt;<br/>
+  &lt;meta http-equiv="Content-Security-Policy" content="default-src chrome:; object-src 'none'"&gt;<br/>
+  &lt;meta name="color-scheme" content="light dark"&gt;<br/>
+  &lt;title data-l10n-id="neterror-page-title"&gt;Problem loading page&lt;/title&gt;<br/>
+  &lt;link rel="stylesheet" href="chrome://global/skin/aboutNetError.css" type="text/css" media="all"&gt;<br/>
+  &lt;link rel="icon" id="favicon" href="chrome://global/skin/icons/info.svg"&gt;<br/>
+  &lt;link rel="localization" href="branding/brand.ftl"&gt;<br/>
+  &lt;link rel="localization" href="toolkit/neterror/certError.ftl"&gt;<br/>
+  &lt;link rel="localization" href="toolkit/neterror/netError.ftl"&gt;<br/>
+ &lt;/head&gt;<br/>
+ &lt;body class="neterror"&gt;<br/>
+  &lt;div class="container"&gt;<br/>
+   &lt;div id="text-container"&gt;&lt;!-- Error Title --&gt;<br/>
+    &lt;div class="title"&gt;<br/>
+     &lt;h1 class="title-text" data-l10n-id="netTimeout-title"&gt;The connection has timed out&lt;/h1&gt;<br/>
+    &lt;/div&gt;&lt;!-- Short Description --&gt;<br/>
+    &lt;p id="errorShortDesc" data-l10n-args="{&quot;errorMessage&quot;:&quot;&quot;,&quot;hostname&quot;:&quot;qa-assistant-ia.3it.cl&quot;}" data-l10n-id="cert-error-ssl-connection-error"&gt;An error occurred during a connection to qa-assistant-ia.3it.cl.&lt;/p&gt;<br/>
+    &lt;p id="errorShortDesc2"&gt;&lt;/p&gt;<br/>
+    &lt;div id="errorWhatToDo" hidden&gt;<br/>
+     &lt;p id="errorWhatToDoTitle" data-l10n-id="certerror-what-can-you-do-about-it-title"&gt;What can you do about it?&lt;/p&gt;<br/>
+     &lt;p id="badStsCertExplanation" hidden&gt;&lt;/p&gt;<br/>
+     &lt;p id="errorWhatToDoText"&gt;&lt;/p&gt;<br/>
+    &lt;/div&gt;&lt;!-- Long Description --&gt;<br/>
+    &lt;div id="errorLongDesc"&gt;<br/>
+     &lt;ul&gt;<br/>
+      &lt;li data-l10n-id="neterror-load-error-try-again"&gt;The site could be temporarily unavailable or too busy. Try again in a few moments.&lt;/li&gt;<br/>
+      &lt;li data-l10n-id="neterror-load-error-connection"&gt;If you are unable to load any pages, check your computer’s network connection.&lt;/li&gt;<br/>
+      &lt;li data-l10n-id="neterror-load-error-firewall"&gt;If your computer or network is protected by a firewall or proxy, make sure that Firefox is permitted to access the web.&lt;/li&gt;<br/>
+     &lt;/ul&gt;<br/>
+    &lt;/div&gt;<br/>
+    &lt;div id="trrOnlyContainer" hidden&gt;<br/>
+     &lt;p id="trrOnlyMessage"&gt;&lt;/p&gt;<br/>
+     &lt;div class="trr-message-container"&gt;&lt;span id="trrOnlyDescription"&gt;&lt;/span&gt;<br/>
+      &lt;p id="trrLearnMoreContainer" hidden&gt;&lt;a id="trrOnlylearnMoreLink" target="_blank" rel="noopener noreferrer" data-l10n-id="neterror-learn-more-link"&gt;Learn more…&lt;/a&gt;&lt;/p&gt;<br/>
+     &lt;/div&gt;<br/>
+     &lt;p data-l10n-id="neterror-dns-not-found-trr-third-party-warning2"&gt;You can continue with your default DNS resolver. However, a third-party might be able to see what websites you visit.&lt;/p&gt;<br/>
+    &lt;/div&gt;<br/>
+    &lt;div id="nativeFallbackContainer" hidden&gt;<br/>
+     &lt;p id="nativeFallbackMessage"&gt;&lt;/p&gt;<br/>
+     &lt;div class="trr-message-container"&gt;&lt;span id="nativeFallbackDescription"&gt;&lt;/span&gt;<br/>
+      &lt;p id="nativeFallbackLearnMoreContainer" hidden&gt;&lt;a id="nativeFallbackLearnMoreLink" target="_blank" rel="noopener noreferrer" data-l10n-id="neterror-learn-more-link"&gt;Learn more…&lt;/a&gt;&lt;/p&gt;<br/>
+     &lt;/div&gt;<br/>
+     &lt;p data-l10n-id="neterror-dns-not-found-trr-third-party-warning2"&gt;You can continue with your default DNS resolver. However, a third-party might be able to see what websites you visit.&lt;/p&gt;<br/>
+    &lt;/div&gt;<br/>
+    &lt;p id="tlsVersionNotice" hidden&gt;&lt;/p&gt;<br/>
+    &lt;p id="learnMoreContainer" hidden&gt;&lt;a id="learnMoreLink" target="_blank" rel="noopener noreferrer" data-telemetry-id="learn_more_link" data-l10n-id="neterror-learn-more-link" href="https://support.mozilla.org/1/firefox/128.0.2/Darwin/en-US/connection-not-secure"&gt;Learn more…&lt;/a&gt;&lt;/p&gt;<br/>
+    &lt;div id="openInNewWindowContainer" class="button-container" hidden&gt;<br/>
+     &lt;p&gt;&lt;a id="openInNewWindowButton" target="_blank" rel="noopener noreferrer"&gt; &lt;button class="primary" data-l10n-id="open-in-new-window-for-csp-or-xfo-error"&gt;Open Site in New Window&lt;/button&gt;&lt;/a&gt;&lt;/p&gt;<br/>
+    &lt;/div&gt;&lt;!-- UI for option to report certificate errors to Mozilla. Removed on<br/>
+             init for other error types .--&gt;<br/>
+    &lt;div id="prefChangeContainer" class="button-container" hidden&gt;<br/>
+     &lt;p data-l10n-id="neterror-pref-reset"&gt;It looks like your network security settings might be causing this. Do you want the default settings to be restored?&lt;/p&gt;&lt;button id="prefResetButton" class="primary" data-l10n-id="neterror-pref-reset-button"&gt;Restore default settings&lt;/button&gt;<br/>
+    &lt;/div&gt;<br/>
+    &lt;div id="certErrorAndCaptivePortalButtonContainer" class="button-container" hidden&gt;&lt;button id="returnButton" class="primary" data-telemetry-id="return_button_top" data-l10n-id="neterror-return-to-previous-page-recommended-button"&gt;Go Back (Recommended)&lt;/button&gt; &lt;button id="openPortalLoginPageButton" class="primary" data-l10n-id="neterror-open-portal-login-page-button" hidden&gt;Open Network Login Page&lt;/button&gt; &lt;button id="certErrorTryAgainButton" class="primary try-again" data-l10n-id="neterror-try-again-button" hidden&gt;Try Again&lt;/button&gt; &lt;button id="advancedButton" data-telemetry-id="advanced_button" data-l10n-id="neterror-advanced-button"&gt;Advanced…&lt;/button&gt;<br/>
+    &lt;/div&gt;<br/>
+   &lt;/div&gt;<br/>
+   &lt;div id="netErrorButtonContainer" class="button-container"&gt;<br/>
+    &lt;button id="neterrorTryAgainButton" class="primary try-again" data-l10n-id="neterror-try-again-button" data-telemetry-id="try_again_button"&gt;Try Again&lt;/button&gt; &lt;button id="trrExceptionButton" data-l10n-id="neterror-add-exception-button" data-telemetry-id="add_exception_button" hidden&gt;Always continue for this site&lt;/button&gt; &lt;button id="trrSettingsButton" data-l10n-id="neterror-settings-button" data-telemetry-id="settings_button" hidden&gt;Change DNS settings&lt;/button&gt; &lt;button id="nativeFallbackContinueThisTimeButton" data-l10n-id="neterror-trr-continue-this-time" data-telemetry-id="continue_button" hidden&gt;Continue this time&lt;/button&gt; &lt;button id="nativeFallbackIgnoreButton" data-l10n-id="neterror-disable-native-feedback-warning" data-telemetry-id="disable_warning" hidden&gt;Always continue&lt;/button&gt;<br/>
+   &lt;/div&gt;<br/>
+   &lt;div class="advanced-panel-container"&gt;<br/>
+    &lt;div id="badCertAdvancedPanel" class="advanced-panel" hidden&gt;<br/>
+     &lt;p id="badCertTechnicalInfo"&gt;&lt;/p&gt;&lt;a id="viewCertificate" href="javascript:void(0)" data-l10n-id="neterror-view-certificate-link"&gt;View Certificate&lt;/a&gt;<br/>
+     &lt;div id="advancedPanelButtonContainer" class="button-container"&gt;&lt;button id="advancedPanelReturnButton" class="primary" data-telemetry-id="return_button_adv" data-l10n-id="neterror-return-to-previous-page-recommended-button"&gt;Go Back (Recommended)&lt;/button&gt; &lt;button id="advancedPanelTryAgainButton" class="primary try-again" data-l10n-id="neterror-try-again-button" hidden&gt;Try Again&lt;/button&gt; &lt;button id="exceptionDialogButton" data-telemetry-id="exception_button" data-l10n-id="neterror-override-exception-button"&gt;Accept the Risk and Continue&lt;/button&gt;<br/>
+     &lt;/div&gt;<br/>
+    &lt;/div&gt;<br/>
+    &lt;div id="blockingErrorReporting" class="advanced-panel" hidden&gt;<br/>
+     &lt;p class="toggle-container-with-text"&gt;&lt;input type="checkbox" id="automaticallyReportBlockingInFuture" role="checkbox"&gt; &lt;label for="automaticallyReportBlockingInFuture" data-l10n-id="neterror-error-reporting-automatic"&gt;Report errors like this to help Mozilla identify and block malicious sites&lt;/label&gt;&lt;/p&gt;<br/>
+    &lt;/div&gt;<br/>
+    &lt;div id="certificateErrorDebugInformation" class="advanced-panel" hidden&gt;&lt;button id="copyToClipboardTop" data-telemetry-id="clipboard_button_top" data-l10n-id="neterror-copy-to-clipboard-button"&gt;Copy text to clipboard&lt;/button&gt;<br/>
+     &lt;div id="certificateErrorText"&gt;&lt;/div&gt;&lt;button id="copyToClipboardBottom" data-telemetry-id="clipboard_button_bot" data-l10n-id="neterror-copy-to-clipboard-button"&gt;Copy text to clipboard&lt;/button&gt;<br/>
+    &lt;/div&gt;<br/>
+   &lt;/div&gt;<br/>
+  &lt;/div&gt;<br/>
+  &lt;script src="chrome://global/content/neterror/aboutNetErrorCodes.js"&gt;&lt;/script&gt;<br/>
+  &lt;script type="module" src="chrome://global/content/aboutNetError.mjs"&gt;&lt;/script&gt;<br/>
+ &lt;/body&gt;<br/>
+&lt;/html&gt;</code></pre></div></body></html>

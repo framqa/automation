@@ -1,0 +1,9 @@
+com/tresit/cl/utilities/website/WebSite.class
+com/tresit/cl/pages/validations/validationChatPage.class
+com/tresit/cl/steps/chatboxIA/chatStep.class
+com/tresit/cl/steps/chatboxIA/questionStep.class
+com/tresit/cl/steps/validations/validationChatStep.class
+com/tresit/cl/pages/chatboxIA/questionPage.class
+com/tresit/cl/definitions/chatboxIA/chatboxDef.class
+com/tresit/cl/pages/chatboxIA/loginPage.class
+com/tresit/cl/RunnerChatbox.class
