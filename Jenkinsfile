@@ -1,4 +1,4 @@
-pipeline {
+ pipeline {
     agent any
 
     environment {
@@ -27,7 +27,7 @@ pipeline {
         stage('Publish Results to Xray') {
             steps {
                 script {
-                    def jsonFile = 'target/serenity/cucumber.json'  
+                    def jsonFile = 'target/serenity/cucumber.json'
                     def xrayTestExecution = "curl -X POST ${JIRA_URL}/rest/raven/1.0/import/execution/cucumber -H 'Content-Type: application/json' -u ${XRAY_CLIENT_ID}:${XRAY_CLIENT_SECRET} -d @${jsonFile}"
                     sh "${xrayTestExecution}"
                 }

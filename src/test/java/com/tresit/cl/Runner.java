@@ -7,7 +7,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/1-LoginSuccessful.feature",
         glue = "com.tresit.cl.definitions",
-        tags = "@Chatbox"
+        tags = "",
+        plugin = {"pretty", "json:target/cucumber-reports.json", "com.aventstack.extentreports.cucumnber.adapter.ExtentCucumberAdapter:"}
 )
 public class Runner {
 

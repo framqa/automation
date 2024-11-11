@@ -20,7 +20,6 @@ public class academicStep extends loginPage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         WebElement elemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("textoEsperado")));
     }
-
     @Step("Tiempo de espera usuario")
     public void waitForUser() throws InterruptedException {
         Thread.sleep(4000);
